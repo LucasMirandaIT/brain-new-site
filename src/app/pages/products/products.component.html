@@ -1,13 +1,30 @@
-<p>A BRAIN possui soluções do tipo “Tailor Made”, ou seja, para cada caso e cliente, produtos customizados para suas respectivas necessidades.</p>
-<p>Esta flexibilidade de possuir um vasto conhecimento em diversas matérias faz com que a empresa Cliente seja vista de maneira global e corporativa, sem seccionamentos que possam dissipar pontos de intersecção entre as diversas áreas.</p>
+<p>A BRAIN possui soluções do tipo “Tailor Made”, ou seja, para cada caso e cliente, produtos customizados para suas respectivas
+	necessidades.
+</p>
+<p>Esta flexibilidade de possuir um vasto conhecimento em diversas matérias faz com que a empresa Cliente seja vista de maneira
+	global e corporativa, sem seccionamentos que possam dissipar pontos de intersecção entre as diversas áreas.</p>
 <p>A BRAIN ganha sinergia para seus Clientes, prevenção e proteção, com qualidade e o devido sigilo.</p>
-<p>Os diversos Produtos podem ser divididos por matéria, sendo que todos possuem recomendações finais e possível acompanhamento de implementação:</p>
+<p>Os diversos Produtos podem ser divididos por matéria, sendo que todos possuem recomendações finais e possível acompanhamento
+	de implementação:</p>
 
-<ul>
-  <li *ngFor="let categoria of produtos">
-    <a>{{categoria.key}}</a>
-    <ul>
-      <li *ngFor="let produto of categoria.value">{{produto}}</li>
-    </ul>
-  </li>
-</ul>
+<mat-accordion *ngIf="!mobile">
+	<mat-expansion-panel *ngFor="let categoria of produtos">
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				{{categoria.key}}
+			</mat-panel-title>
+		</mat-expansion-panel-header>
+		<ul>
+			<li *ngFor="let produto of categoria.value">{{produto}}</li>
+		</ul>
+	</mat-expansion-panel>
+</mat-accordion>
+
+<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" *ngIf="mobile">
+	<div ngxSlickItem *ngFor="let slide of produtos" class="slide">
+    <h2>{{slide.key}} </h2>
+		<ul>
+      <li *ngFor="let produto of slide.value"> {{produto}} </li>
+		</ul>
+  </div>
+</ngx-slick>

@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { DeviceDetectorModule } from 'ngx-device-detector';
+import { SlickModule } from 'ngx-slick';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -48,6 +51,8 @@ import { LinksComponent } from './pages/links/links.component';
     }),
     ImageCropperModule,
     ClipboardModule,
+    DeviceDetectorModule.forRoot(),
+    SlickModule.forRoot(),
     AppRoutingModule
   ],
   providers: [
