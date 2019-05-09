@@ -1,0 +1,8 @@
+<ul>
+  <li style="list-style: none" *ngFor="let link of links">
+    <a [href]="link.url" target="_blank">
+      <img [src]="link.img" style="width: 50px" />
+      {{link.name}}
+    </a>
+  </li>
+</ul>
