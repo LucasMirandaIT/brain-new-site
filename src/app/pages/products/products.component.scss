@@ -1,3 +1,5 @@
+@import '../../../assets/variables';
+
 .carousel {
   margin: 0 auto;
     position: relative;
@@ -11,4 +13,17 @@
 
 .products-text {
   text-indent: 35px;
+}
+
+.accordion-header {
+  background-color: $blue-b;
+  color: $blue-d;
+}
+
+..mat-expanded:hover {
+  babckground-color: $blue-c !important;
+}
+
+.mat-expansion-panel-body {
+  background-color: #FEFEFE !important;
 }
