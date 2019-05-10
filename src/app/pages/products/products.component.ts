@@ -15,7 +15,6 @@ export class ProductsComponent implements OnInit {
   produtos;
   mobile: boolean;
 
-
   slideConfig = {"slidesToShow": 1, "arrows": true, "dots": true};
 
   constructor(private http: Http) { }

@@ -36,7 +36,8 @@
         </ul>
       </div>
     </nav>
-    <h2 style="color: white; margin-left: 15px">Lucas Miranda Versão Desktop</h2>
+    <h2 style="color: white; margin-left: 15px" *ngIf="!mobile">Brain Desktop</h2>
+    <h2 style="color: white; margin-left: 15px" *ngIf="mobile">Brain Mobile</h2>
   </div>
 </div>
 <!-- <div class="header-bar mobile" *ngIf="mobile">
