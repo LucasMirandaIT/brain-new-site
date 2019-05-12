@@ -6,3 +6,36 @@
     Telefone para contato:
     Produto desejado:    
 </p>
+
+ <mat-form-field>
+    <input matInput [(ngModel)]="dadosForm.nome" placeholder="Nome">
+  </mat-form-field>
+
+   <mat-form-field>
+    <input matInput [(ngModel)]="dadosForm.empresa" placeholder="Empresa">
+  </mat-form-field>
+
+   <mat-form-field>
+    <input matInput [(ngModel)]="dadosForm.email" placeholder="E-Mail">
+  </mat-form-field>
+   <mat-form-field>
+    <input matInput [(ngModel)]="dadosForm.telefone" placeholder="Telefone para Contato">
+  </mat-form-field>
+
+<mat-form-field>
+  <mat-label>Produto Desejado</mat-label>
+  <mat-select [(ngModel)]="dadosForm.assunto">
+    <mat-optgroup *ngFor="let categoria of produtos" [label]="categoria.key"
+                  disabled>
+      <mat-option *ngFor="let produto of categoria.value" [value]="produto">
+        {{produto}}
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+
+  <mat-form-field>
+    <textarea [(ngModel)]="mensagem" matInput placeholder="Mensagem"></textarea>
+  </mat-form-field>
+
+  <button mat-button (click)="sendMail(mensagem)">Enviar</button>

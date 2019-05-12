@@ -8,9 +8,23 @@ import { ToastrService, ToastrConfig } from 'ngx-toastr';
 })
 export class HomeComponent implements OnInit {
 
+  mobile = false;
+
   constructor() { }
 
   ngOnInit() {
+    this.checkMobile();
+    window.onresize = (e) => {
+      this.checkMobile();
+    };
+  }
+
+  checkMobile() {
+    if (window.innerWidth <= 768) {
+      this.mobile = true;
+    } else {
+      this.mobile = false;
+    }
   }
 
 }

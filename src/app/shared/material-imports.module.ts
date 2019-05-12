@@ -15,6 +15,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 
 import {MatMenuModule} from '@angular/material/menu';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSelectModule,
     MatCardModule,
     MatMenuModule,
+    MatExpansionModule,
     MatIconModule
   ],
   exports: [
@@ -50,6 +53,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSelectModule,
     MatCardModule,
     MatMenuModule,
+    MatExpansionModule,
     MatIconModule
   ],
   providers: [
